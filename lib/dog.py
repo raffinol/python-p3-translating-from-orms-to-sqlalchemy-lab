@@ -2,9 +2,7 @@ from models import Dog
 from sqlalchemy import create_engine
 
 def create_table(Base, engine):
-    if __name__ == '__main__':
-        engine = create_engine('sqlite:///dogs.db')
-        Base.metadata.create_all(engine)
+    Base.metadata.create_all(engine)
 
 def save(session, dog):
     session.add(dog)
